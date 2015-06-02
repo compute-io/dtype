@@ -41,8 +41,8 @@ The following input values are supported:
 | [`true|false`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | boolean |
 | [`<number>`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | number |
 | [`<string>`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | string |
-| `<function>` | function |
 | [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) | symbol |
+| [`<function>`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) | function |
 | [`Buffer`](https://nodejs.org/api/buffer.html) | binary |
 | [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | binary |
 | [`Int8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array) | int8 | 
@@ -56,6 +56,11 @@ The following input values are supported:
 | [`Float64Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array) | float64 |
 | [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) | generic |
 | Other | generic |
+
+
+__Note__: values created using `String`, `Boolean`, and `Number` constructors are `Objects` and considered `generic`.
+
+
 
 
 ## Examples
