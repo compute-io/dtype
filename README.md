@@ -41,7 +41,7 @@ The following input values are supported:
 | [`true|false`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | boolean |
 | [`<number>`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | number |
 | [`<string>`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | string |
-| [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) | symbol |
+| [`<symbol>`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) | symbol |
 | [`<function>`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) | function |
 | [`Buffer`](https://nodejs.org/api/buffer.html) | binary |
 | [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | binary |
