@@ -17,18 +17,84 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'compute-dtype' );
+var dtype = require( 'compute-dtype' );
 ```
 
-#### foo( arr )
+#### dtype( value )
 
-What does this function do?
+Determines the underlying data type of an input `value`.
+
+``` javascript
+var dt = dtype( Int16Array( 10 ) );
+// returns 'int16'
+
+dt = dtype( true );
+// returns 'boolean'
+```
+
+The following input values are supported:
+
+| Value | Data Type |
+|:------|:------------|
+| [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) | undefined |
+| [`null`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | null |
+| [`true|false`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | boolean |
+| [`<number>`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | number |
+| [`<string>`](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) | string |
+| `<function>` | function |
+| [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) | symbol |
+| [`Buffer`](https://nodejs.org/api/buffer.html) | binary |
+| [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | binary |
+| [`Int8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array) | int8 | 
+| [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | uint8 | 
+| [`Uint8ClampedArray`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | uint8_clamped |
+| [`Int16Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array) | int16 |
+| [`Uint16Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array) | uint16 |
+| [`Int32Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) | int32 |
+| [`Uint32Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array) | uint32 |
+| [`Float32Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array) | float32 |
+| [`Float64Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array) | float64 |
+| [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) | generic |
+| Other | generic |
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'compute-dtype' );
+var dtype = require( 'compute-dtype' );
+
+console.log( dtype( null ) );
+// returns 'null'
+
+console.log( dtype( undefined ) );
+// returns 'undefined'
+
+console.log( dtype( true ) );
+// returns 'boolean'
+
+console.log( dtype( Math.PI ) );
+// returns 'number'
+
+console.log( dtype( 'beep' ) );
+// returns 'string'
+
+console.log( dtype( function beep(){} ) );
+// returns 'function'
+
+console.log( dtype( new Int8Array( 10 ) ) );
+// returns 'int8'
+
+console.log( dtype( new Float64Array( 20 ) ) );
+// returns 'float64'
+
+console.log( dtype( new Buffer( 'woot' ) ) );
+// returns 'binary'
+
+console.log( dtype( [] ) );
+// returns 'generic'
+
+console.log( dtype( {} ) );
+// returns 'generic'
 ```
 
 To run the example code from the top-level application directory,

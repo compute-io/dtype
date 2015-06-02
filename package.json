@@ -25,12 +25,26 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "dtype",
+    "data",
+    "type",
+    "ctor",
+    "constructor",
+    "typeof",
+    "array",
+    "object",
+    "util",
+    "utils",
+    "utility",
+    "utilities"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/dtype/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "type-name": "^1.0.1"
+  },
   "devDependencies": {
     "chai": "2.x.x",
     "mocha": "2.x.x",
