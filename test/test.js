@@ -61,6 +61,9 @@ describe( 'compute-dtype', function tests() {
 		// Generic:
 		assert.strictEqual( dtype( [] ), 'generic', 'Array' );
 		assert.strictEqual( dtype( {} ), 'generic', 'Object' );
+		assert.strictEqual( dtype( new String( 'beep' ) ), 'generic', 'new String' );
+		assert.strictEqual( dtype( new Boolean( true ) ), 'generic', 'new Boolean' );
+		assert.strictEqual( dtype( new Number( 5 ) ), 'generic', 'new Number' );
 		assert.strictEqual( dtype( new Beep() ), 'generic', 'Class instance' );
 
 		function Beep() {

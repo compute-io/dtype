@@ -34,3 +34,12 @@ console.log( dtype( [] ) );
 
 console.log( dtype( {} ) );
 // returns 'generic'
+
+console.log( dtype( new String( 'beep' ) ) );
+// returns 'generic'
+
+console.log( dtype( new Boolean( true ) ) );
+// returns 'generic'
+
+console.log( dtype( new Number( 5 ) ) );
+// returns 'generic'
