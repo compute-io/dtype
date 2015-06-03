@@ -1,6 +1,6 @@
 {
   "name": "compute-dtype",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Determines the underlying data type of an input value.",
   "author": {
     "name": "Athan Reines",
