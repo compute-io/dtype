@@ -43,6 +43,7 @@
     "url": "https://github.com/compute-io/dtype/issues"
   },
   "dependencies": {
+    "compute-array-dtype": "^1.0.0",
     "type-name": "^1.0.1"
   },
   "devDependencies": {
